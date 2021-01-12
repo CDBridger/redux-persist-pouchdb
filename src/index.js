@@ -2,7 +2,7 @@ import PouchDB from "pouchdb";
 
 export default class PouchDBStorage {
   constructor(db, options = {}) {
-    if (typeof db !== "string" && options == {}) {
+    if (typeof db !== "string") {
       this.db = db;
     } else {
       this.db = new PouchDB(db, options);
